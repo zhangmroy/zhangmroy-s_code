@@ -1,0 +1,17 @@
+import webbrowser as web
+import os
+import time 
+
+url = "http://blog.sina.com.cn/zhangmroy"
+
+i = 1
+while i < 10:
+    web.open_new(url)
+    time.sleep(3)
+    os.system('taskkill /f /im chrome.exe')
+    print i
+    i = i + 1
+    if i == 100:
+        break
+
+print "task over !"
